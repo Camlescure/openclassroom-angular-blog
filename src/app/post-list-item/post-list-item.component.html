@@ -1,0 +1,13 @@
+<div [ngClass]="{'list-group-item': true, 
+				'list-group-item-success': coeurs>0, 
+				'list-group-item-danger': coeurs<0}">
+	<div style="display:flex; flex-direction:row; justify-content:space-between">
+		<h2>{{titre}}</h2>
+		<span>{{dateCrea | date:'dd/MM/yyyy, hh:mm a'}}</span>
+	</div>
+	<p>{{content}}</p>
+	<div style="display:flex; flex-direction:row">
+		<button style="margin-right:5px;" class="btn btn-success" (click)="ajoutCoeur()">Love it!</button>
+		<button class="btn btn-danger" (click)="enleveCoeur()">Don't love it!</button>
+	</div>
+</div>
