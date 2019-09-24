@@ -1,0 +1,12 @@
+<h1 style="text-align:center"> Nouveau Post </h1>
+<form [formGroup] = "postForm" (ngSubmit)="onSubmit()" style="margin:10px;">
+	<div class="form-group">
+		<label for="titre"> Titre </label>
+		<input type="text" id="titre" class="form-control" formControlName="titre">
+	</div>
+	<div class="form-group">
+		<label for="content"> Contenu </label>
+		<textarea rows="15"  id="content" class="form-control" formControlName="content"></textarea>
+	</div>
+	<button class="btn btn-secondary" type="submit" [disabled]="postForm.invalid">Soumettre </button>
+</form>

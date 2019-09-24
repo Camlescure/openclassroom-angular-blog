@@ -6,8 +6,11 @@
 		<span>{{dateCrea | date:'dd/MM/yyyy, hh:mm a'}}</span>
 	</div>
 	<p>{{content}}</p>
-	<div style="display:flex; flex-direction:row">
-		<button style="margin-right:5px;" class="btn btn-success" (click)="ajoutCoeur()">Love it!</button>
-		<button class="btn btn-danger" (click)="enleveCoeur()">Don't love it!</button>
+	<div style="display:flex; flex-direction:row; justify-content:space-between">
+		<div style="display:flex; flex-direction:row">
+			<button style="margin-right:5px;" class="btn btn-success" (click)="ajoutCoeur(id)">Love it!</button>
+			<button class="btn btn-danger" (click)="enleveCoeur(id)">Don't love it!</button>
+		</div>
+		<button class="btn btn-danger" (click)="deletePost(id)">Supprimer post</button>
 	</div>
 </div>

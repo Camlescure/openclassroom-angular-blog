@@ -1,2 +1,12 @@
-<h1 style="text-align:center; margin-bottom:15px;">POSTS</h1>
-<app-post-list class="list-group" [posts]="posts"></app-post-list>
+<nav style="background-color:rgb(245, 245, 240); height:55px; margin-top:3px">
+	<ul style="list-style: none;display:flex; flex-direction:row;">
+		<li routerLinkActive="active" style="margin-top:18px; text-align:center">
+			<a routerLink="posts" style="text-decoration:none; color:rgb(161, 161, 154); margin-right:35px">Posts</a>
+		</li>
+		<li routerLinkActive="active" style="margin-top:18px; text-align:center">
+			<a routerLink="new" style="text-decoration:none; color:rgb(161, 161, 154)">Nouveau Post</a>
+		</li>
+	</ul>
+ 	
+</nav>
+<router-outlet></router-outlet>
